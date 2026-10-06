@@ -1,0 +1,17 @@
+[
+  {
+    "phone": "+34 612 89 45 23",
+    "normalizedPhone": "34612894523",
+    "title": "Prueba Duplicada",
+    "existingTitle": "Elena 24 años nueva en el centro, simpática y divertida",
+    "detectedAt": "2026-10-02T19:23:12.171Z"
+  },
+  {
+    "phone": "+34 612 89 45 23",
+    "normalizedPhone": "34612894523",
+    "title": "Elena rubia universitaria en Chamberí (Anuncio repetido)",
+    "existingTitle": "Elena 24 años nueva en el centro, simpática y divertida",
+    "sourceUrl": "https://www.mundosexanuncio.com/madrid/",
+    "detectedAt": "2026-10-02T18:23:03.364Z"
+  }
+]

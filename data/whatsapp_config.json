@@ -1,0 +1,40 @@
+{
+  "businessNumber": "+66917515345",
+  "senderName": "autopubli24",
+  "dispatchMode": "web_queue",
+  "delaySeconds": 15,
+  "randomizeDelay": true,
+  "maxBatchSize": 50,
+  "pauseAfterBatchCount": 20,
+  "pauseDurationMinutes": 2,
+  "defaultMessageTemplate": "Hola {nombre} 👋 Vi tu anuncio en {portal} ({ciudad}).\n\nEn autopubli24 hacemos que tu anuncio suba automáticamente a primera posición cada 20 minutos las 24h sin que tengas que renovarlo a mano, para que recibas llamadas todo el día 📲\n\n⚠️ Límite en {ciudad}: Máximo 8 anunciantes por zona para garantizar siempre el puesto #1. Hoy solo quedan 3 plazas disponibles.\n\nSi te interesa, respóndeme por aquí y te reservo la plaza directamente. ¡Un saludo!",
+  "sendImageAfterMessage": true,
+  "templates": [
+    {
+      "id": "tpl_exclusiva",
+      "title": "Plantilla 1: autopubli24 + Exclusiva Zona (24h)",
+      "tag": "Exclusiva Zona",
+      "text": "Hola {nombre} 👋 Vi tu anuncio en {portal} ({ciudad}).\n\nEn autopubli24 hacemos que tu anuncio suba automáticamente a primera posición cada 20 minutos las 24h sin que tengas que renovarlo a mano, para que recibas llamadas todo el día 📲\n\n⚠️ Límite en {ciudad}: Máximo 8 anunciantes por zona para garantizar siempre el puesto #1. Hoy solo quedan 3 plazas disponibles.\n\nSi te interesa, respóndeme por aquí y te reservo la plaza directamente. ¡Un saludo!"
+    },
+    {
+      "id": "tpl_direct",
+      "title": "Plantilla 2: Directa y Posicionamiento 24h",
+      "tag": "Directa",
+      "text": "Hola {nombre}, he visto tu anuncio en {portal} ({ciudad}). ¿Te interesaría mantener tu anuncio en las primeras posiciones las 24h sin tener que renovarlo a mano? En autopubli24 automatizamos las publicaciones para que recibas más llamadas. Si quieres te paso info sin compromiso."
+    },
+    {
+      "id": "tpl_time",
+      "title": "Plantilla 3: Ahorro de Tiempo y Auto-Subida",
+      "tag": "Ahorro Tiempo",
+      "text": "Buenas {nombre} 👋 Vi tu perfil en {portal}. Sabemos el tiempo que quita estar pendiente de subir y renovar anuncios todo el día. Con el sistema de autopubli24 tu anuncio se auto-publica solo y se mantiene arriba en {ciudad}. ¿Te gustaría probarlo o que te explique cómo funciona?"
+    },
+    {
+      "id": "tpl_calls",
+      "title": "Plantilla 4: Más Visitas y Duplicar Contactos",
+      "tag": "Más Llamadas",
+      "text": "Hola {nombre}, ¿cómo estás? Te escribo porque tenemos anunciantes en {ciudad} utilizando autopubli24 para posicionar sus anuncios en {portal} y están duplicando contactos. Si quieres multiplicar tus visitas y llamadas con publicación automática 24/7, avísame y te cuento detalles. ¡Un saludo!"
+    }
+  ],
+  "rotationMode": "round_robin",
+  "selectedTemplateIndex": 0
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>autopubli24 Auto-Sender</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { width: 380px; min-height: 520px; background: #0f172a; color: #f8fafc; padding: 14px; }
+    
+    .header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #1e293b; margin-bottom: 12px; }
+    .brand { display: flex; align-items: center; gap: 8px; }
+    .logo { width: 28px; height: 28px; border-radius: 8px; background: #10b981; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #fff; font-size: 14px; }
+    .title { font-size: 14px; font-weight: 700; color: #fff; }
+    .subtitle { font-size: 10px; color: #94a3b8; }
+    .badge { font-size: 10px; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 2px 8px; border-radius: 12px; font-weight: 600; border: 1px solid rgba(16, 185, 129, 0.4); }
+
+    .card { background: #1e293b; border-radius: 12px; padding: 12px; margin-bottom: 10px; border: 1px solid #334155; }
+    .card-title { font-size: 11px; font-weight: 700; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
+
+    label { font-size: 11px; color: #94a3b8; display: block; margin-bottom: 4px; }
+    input[type="text"], select { width: 100%; background: #0f172a; border: 1px solid #334155; color: #f8fafc; padding: 6px 10px; border-radius: 8px; font-size: 11px; outline: none; }
+    input[type="text"]:focus, select:focus { border-color: #10b981; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 8px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; border: none; transition: all 0.2s; }
+    .btn-primary { background: #10b981; color: #fff; }
+    .btn-primary:hover { background: #059669; }
+    .btn-secondary { background: #334155; color: #cbd5e1; }
+    .btn-secondary:hover { background: #475569; }
+    .btn-danger { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+    .btn-danger:hover { background: #ef4444; color: #fff; }
+
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .progress-box { margin-top: 6px; }
+    .progress-bar-bg { width: 100%; height: 6px; background: #0f172a; border-radius: 4px; overflow: hidden; margin-top: 6px; }
+    .progress-bar-fill { height: 100%; background: #10b981; width: 0%; transition: width 0.3s; }
+    .status-text { font-size: 11px; color: #38bdf8; margin-top: 6px; font-weight: 600; min-height: 16px; }
+
+    .contact-list { max-height: 120px; overflow-y: auto; margin-top: 8px; border: 1px solid #334155; border-radius: 8px; background: #0f172a; }
+    .contact-row { padding: 6px 8px; font-size: 11px; border-bottom: 1px solid #1e293b; display: flex; align-items: center; justify-content: space-between; }
+    .contact-row:last-child { border-bottom: none; }
+    .contact-row.sent { color: #10b981; }
+    .contact-row.sending { color: #f59e0b; font-weight: bold; background: rgba(245, 158, 11, 0.1); }
+    .contact-row.failed { color: #ef4444; }
+
+    .actions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="brand">
+      <div class="logo">24</div>
+      <div>
+        <div class="title">autopubli24 Auto-Sender</div>
+        <div class="subtitle">WhatsApp Web Automation</div>
+      </div>
+    </div>
+    <span class="badge" id="statusBadge">Listo</span>
+  </div>
+
+  <!-- Server connection -->
+  <div class="card">
+    <div class="card-title">
+      <span>1. Conexión y Contactos</span>
+      <div style="display: flex; gap: 4px;">
+        <button id="btnAutoDetect" class="btn btn-secondary" style="width: auto; padding: 2px 6px; font-size: 10px;" title="Autodetectar URL del panel abierto">🔍 Detectar URL</button>
+        <button id="btnSync" class="btn btn-secondary" style="width: auto; padding: 2px 8px; font-size: 10px;">🔄 Sincronizar</button>
+      </div>
+    </div>
+    <label>URL de tu Panel autopubli24:</label>
+    <input type="text" id="serverUrl" placeholder="https://mi-panel-autopubli24.run.app" value="">
+    
+    <div style="margin-top: 8px;">
+      <label>¿Qué contactos sincronizar?</label>
+      <select id="syncScopeSelect">
+        <option value="selection" selected>🎯 Mi selección activa en el panel web</option>
+        <option value="all_new">🌟 Todos los nuevos (sin contactar)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Delay & Settings -->
+  <div class="card">
+    <div class="card-title">2. Intervalo Anti-Ban (Poco a Poco)</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+      <div>
+        <label>Tiempo entre envíos:</label>
+        <select id="delaySelect">
+          <option value="60">60 seg (1 min)</option>
+          <option value="90" selected>90 seg (1.5 min)</option>
+          <option value="120">120 seg (2 min)</option>
+          <option value="180">180 seg (3 min)</option>
+        </select>
+      </div>
+      <div>
+        <label>Variación humana:</label>
+        <select id="jitterSelect">
+          <option value="yes" selected>±15s Aleatorio</option>
+          <option value="no">Fijo exacto</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress & Queue -->
+  <div class="card">
+    <div class="card-title">
+      <span>3. Cola de Envíos</span>
+      <span id="counterText" style="color: #10b981;">0 / 0</span>
+    </div>
+    
+    <div class="progress-box">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+      <div class="status-text" id="statusLog">Haz clic en Sincronizar para cargar los contactos.</div>
+    </div>
+
+    <div class="contact-list" id="contactList">
+      <div style="padding: 10px; text-align: center; color: #64748b; font-size: 11px;">
+        Sin contactos cargados
+      </div>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="actions-grid">
+      <button id="btnStart" class="btn btn-primary" disabled>▶ Iniciar Automático</button>
+      <button id="btnStop" class="btn btn-danger" disabled>⏹ Detener</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

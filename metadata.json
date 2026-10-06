@@ -1,0 +1,6 @@
+{
+  "name": "Directorio & Scraper de Anuncios",
+  "description": "Dashboard personal para extraer anuncios clasificados con foto, título y teléfono deduplicado para crear tu propio directorio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

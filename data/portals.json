@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Mileroticos",
+    "domain": "mileroticos.com",
+    "url": "https://mileroticos.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=mileroticos.com&sz=128",
+    "description": "Portal clasificado analizado para mileroticos.com",
+    "id": "portal_1791068565597_7db8",
+    "addedAt": "2026-10-03T23:02:45.597Z"
+  },
+  {
+    "id": "portal_01",
+    "name": "Mundosexanuncio",
+    "domain": "mundosexanuncio.com",
+    "url": "https://www.mundosexanuncio.com/",
+    "logoUrl": "https://static.mundosexanuncio.com/images/mundosexlogo.png",
+    "seoRank": 1,
+    "monthlyVisitsEstimated": "3.5M visitas/mes",
+    "description": "Top 1 posicionamiento SEO en España por provincias y ciudades",
+    "addedAt": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "portal_02",
+    "name": "NuevoLoquo",
+    "domain": "nuevoloquo.es",
+    "url": "https://www.nuevoloquo.es/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=nuevoloquo.es&sz=128",
+    "seoRank": 2,
+    "monthlyVisitsEstimated": "2.4M visitas/mes",
+    "description": "Portal de alta autoridad con 89% de su tráfico procedente de España",
+    "addedAt": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "portal_03",
+    "name": "Skokka España",
+    "domain": "es.skokka.com",
+    "url": "https://es.skokka.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=es.skokka.com&sz=128",
+    "seoRank": 3,
+    "monthlyVisitsEstimated": "1.8M visitas/mes",
+    "description": "Portal internacional de anuncios con fuerte indexación en Google España",
+    "addedAt": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "portal_04",
+    "name": "Erosguía",
+    "domain": "erosguia.com",
+    "url": "https://www.erosguia.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=erosguia.com&sz=128",
+    "seoRank": 4,
+    "monthlyVisitsEstimated": "1.1M visitas/mes",
+    "description": "Guía y directorio especializado con filtros por localidad y servicios",
+    "addedAt": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "portal_05",
+    "name": "Slumi",
+    "domain": "slumi.com",
+    "url": "https://www.slumi.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=slumi.com&sz=128",
+    "seoRank": 5,
+    "monthlyVisitsEstimated": "500K visitas/mes",
+    "description": "Portal de contactos y clasificados en crecimiento continuo en España",
+    "addedAt": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "portal_06",
+    "name": "Locanto España",
+    "domain": "locanto.es",
+    "url": "https://www.locanto.es/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=locanto.es&sz=128",
+    "seoRank": 6,
+    "monthlyVisitsEstimated": "850K visitas/mes",
+    "description": "Tablón de clasificados con sección activa de contactos por comunidades",
+    "addedAt": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "portal_07",
+    "name": "Destacamos",
+    "domain": "destacamos.com",
+    "url": "https://www.destacamos.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=destacamos.com&sz=128",
+    "seoRank": 7,
+    "monthlyVisitsEstimated": "420K visitas/mes",
+    "description": "Directorio de anuncios clasificados y perfiles por capitales de provincia",
+    "addedAt": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "portal_08",
+    "name": "CitaPerfecta",
+    "domain": "citaperfecta.com",
+    "url": "https://www.citaperfecta.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=citaperfecta.com&sz=128",
+    "seoRank": 8,
+    "monthlyVisitsEstimated": "280K visitas/mes",
+    "description": "Plataforma para publicar y buscar contactos independientes",
+    "addedAt": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "portal_09",
+    "name": "TuAd España",
+    "domain": "tuad.es",
+    "url": "https://www.tuad.es/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tuad.es&sz=128",
+    "seoRank": 9,
+    "monthlyVisitsEstimated": "190K visitas/mes",
+    "description": "Portal de publicación rápida de anuncios clasificados",
+    "addedAt": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "portal_10",
+    "name": "Evisos España",
+    "domain": "evisos.es",
+    "url": "https://www.evisos.es/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=evisos.es&sz=128",
+    "seoRank": 10,
+    "monthlyVisitsEstimated": "150K visitas/mes",
+    "description": "Anuncios clasificados tradicionales divididos por zonas postales",
+    "addedAt": "2026-10-01T00:00:00.000Z"
+  }
+]
